@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <meta charset = "UTF-8">
+ <title>Product Page</title>
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "myStyle.css" />
+  </head>
+<body>
+
+
+<main class="container">
+ 
+  <!-- Product Image -->
+  <div class="left-column">
+    <img data-image="red" id="imageToChange" class="active" style="opacity: 1.0" src="images/red.png" alt=""> <!-- This div is in charge of handling the left side which contain the image. The red lambo is the first one showed-->
+  </div>
+ 
+ 
+  <!-- Right Column -->
+  <div class="right-column">
+ 
+    <!-- Product Description -->
+    <div class="product-description"> 
+      <h1>HICKIES Originals</h1>
+      <div class="reviews">
+          <div class="review1"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div> <!-- Star reviews -->
+          <div class="review2"><p>1,293 Reviews</p></div>
+    
+      </div>
+      <div class="pricing">
+          <div class="pricing1" id="actual-price"><p>$14.99</p></div>
+          <div class="pricing2" id="old-price"><p>$17.99</p></div>
+          <div class="pricing3"><p><b>25% OFF</b></p></div>      
+      </div>   
+      <p><e>ONLINE EXCLUSIVE</e></p>
+    </div>
+ 
+    <!-- Product Configuration -->
+    <div class="product-configuration">
+ 
+      <!-- Product Color -->
+      <div class="product-color">  <!-- Each color is a radio button. They hold a function changeText() which will be explained below. -->
+        <h4 style="display: inline";><b>Color: </b></h4><p style="display:inline"; id="colorToChange"></p>
+ 
+        <div class="color-choose">
+          <div>
+            <input data-image="red" type="radio" id="red" name="color" value="red" onclick="changeText(this.id)" >
+            <label for="red"><span></span></label>
+          </div>
+          <div>
+            <input data-image="blue" type="radio" id="blue" name="color" value="blue" onclick="changeText(this.id)" >
+            <label for="blue"><span></span></label>
+          </div>
+          <div>
+            <input data-image="black" type="radio" id="black" name="color" value="black" onclick="changeText(this.id)" >
+            <label for="black"><span></span></label>
+          </div>
+            <div>
+            <input data-image="white" type="radio" id="white" name="color" value="white" onclick="changeText(this.id)">
+            <label for="white"><span></span></label>
+          </div>
+            <div>
+            <input data-image="orange" type="radio" id="orange" name="color" value="orange" onclick="changeText(this.id)">
+            <label for="orange"><span></span></label>
+          </div>
+            <div>
+            <input data-image="yellow" type="radio" id="yellow" name="color" value="yellow" onclick="changeText(this.id)">
+            <label for="yellow"><span></span></label>
+          </div>
+            <div>
+            <input data-image="darkblue" type="radio" id="darkblue" name="color" value="dark blue" onclick="changeText(this.id)">
+            <label for="darkblue"><span></span></label>
+          </div>
+            <div>
+            <input data-image="greyblue" type="radio" id="greyblue" name="color" value="grey blue" onclick="changeText(this.id)">
+            <label for="greyblue"><span></span></label>
+          </div>
+            <div>
+            <input data-image="beige" type="radio" id="beige" name="color" value="beige" onclick="changeText(this.id)">
+            <label for="beige" ><span></span></label>
+          </div>
+            <div>
+            <input data-image="lightblue" type="radio" id="lightblue" name="color" value="light blue" onclick="changeText(this.id)">
+            <label for="lightblue"><span></span></label>
+          </div>
+            <div>
+            <input data-image="green" type="radio" id="green" name="color" value="green" onclick="changeText(this.id)">
+            <label for="green"><span></span></label>
+          </div>
+            <div>
+            <input data-image="pink" type="radio" id="pink" name="color" value="pink" onclick="changeText(this.id)">
+            <label for="pink"><span></span></label>
+          </div>
+            <div>
+            <input data-image="marron" type="radio" id="marron" name="color" value="marron" onclick="changeText(this.id)">
+            <label for="marron"><span></span></label>
+          </div>
+            
+        </div>
+ 
+      </div>
+        
+        
+        <p><b>Size guide</b></p>
+        <p><b>Custom price</b></p>
+ 
+ 
+    <!-- Product Pricing -->
+    <div class="product-price">   
+      <input type="text" value="0" class="input-price" id="input-quantity">  <!-- Input Quantity -->
+      <a href="#" class="cart-btn" id="cartButton">Add To Cart</a>  <!-- Add to Cart Button -->
+    </div>
+  </div>
+      <hr>
+        <h2><b>DETAILS</b></h2>
+     
+        <div class="color-choose" id="details-color-choose"> <!-- Code will be overwritten in this block. This shows the number of product selected -->
+
+            <hr>     
+
+        </div>
+         <!-- Help -->  
+      <div id="helpButton">
+          <button>Need help</button>   
+    </div>
+    <div id="helpModal" class="modal">
+
+  <!-- Modal content --> 
+  <div class="modal-content">  <!-- This is the help modal content. -->
+    <span class="close">&times;</span> <!-- Close button -->
+    <p>If any problems are detected of if you wish to add any comment, our support service is 
+        avaiable 7/7 and 24/24 to assist you. Contact us on the 0768441848. T's & C's may apply. Or alternatively, 
+      feel free to feel the form below. Our team will get back to you as soon as possible. </p>
+          <div class="contact">     
+          <h3>Name</h3>
+          <input type="text" placeholder="Name.." required autofocus>
+          <h3>Surname</h3> 
+          <input type="email" placeholder="Email.." required autofocus>
+          <h3>Country</h3>
+          <select  name="Country">
+            <option value="France">France</option>
+            <option value="South Africa">South Africa</option>
+            <option value="USA">USA</option>
+          </select>
+          <h3>Subject</h3>
+          <input type="text" placeholder="" style="height:200px" required autofocus>
+            
+      </div> 
+      <div class="contact_button">
+        <input type="submit" value="Submit"> 
+      </div>
+  </div>       
+    </div>
+      
+      <h4><b>Shipping Return</b></h4>
+  </div>
+         
+    
+<div id="productModal" class="modal">
+
+  <!-- Product Modal content -->
+  <div class="modal-content-product"> <!-- This modal will be used to add the number of product selected. -->
+    <span class="closeProduct">&times;</span>
+    <p>Please add the quantity of the item you selected</p>
+    <div class="quantity-control" style="display: inline">
+        <h4 style="display: inline" id="productColor"><b></b></h4>
+        <button class="plus-button" style="display: inline" id="plusButton">+</button>
+        <h3 style="display: inline" style="margin-right:10px" id="quantity"><b>0</b></h3>
+        <button class="minus-button" style="display: inline" id="minusButton">-</button>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="quantity-button">
+          <button class="agree-button" id="agreeButton">Agree</button>
+          <button class="cancel-button" id="cancelButton">Cancel</button>
+      </div>
+  </div>
+        
+</div>
+    
+<div id="checkoutModal" class="modal">
+
+  <!-- Checkout Modal content -->
+  <div class="modal-content-product"> <!-- This modal will be displayed for checkout purpose -->
+    <span class="closeCheckout" >&times;</span>
+    <p><b>Your Shopping Cart </b></p>
+    <div class="quantity-control" style="display: inline">
+        <h4 style="display: inline"  class="color-choose" id="productColorCheckout"><b></b></h4>
+        <h4 style="display: inline" id="quantityCheckout"><b></b></h4>
+        <h3 style="display: inline" id="priceCheckout"><b></b></h3>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="quantity-button">
+          <button class="clean-button" id="cleanButton">Clean</button>
+          <button class="checkout-button" id="checkoutButton">Checkout</button>
+      </div>
+  </div>
+        
+</div>
+    
+<script>
+   
+    <!-- Product quantity incrementation and decrementation & Quantity and details Update -->
+var quantity = 0;
+var plusButton = document.getElementById("plusButton");
+var minusButton = document.getElementById("minusButton");
+var cancelButton = document.getElementById("cancelButton"); 
+var agreeButton = document.getElementById("agreeButton");
+var inputQuantity = document.getElementById("input-quantity");
+var price = new Array();  //This is the table holding all the products prices. 
+    price["red"]=232.99;
+    price["blue"]=100.99;
+    price["black"]=234.99;
+    price["white"]=456.99;
+    price["orange"]=325.99;
+    price["yellow"]=654.99;
+    price["darkblue"]=124.99;
+    price["greyblue"]=634.99;
+    price["beige"]=636.99;
+    price["lightblue"]=125.99;
+    price["green"]=742.99;
+    price["marron"]=876.99;
+    price["pink"]=651.99;
+    
+plusButton.onclick = function() { //Update the quantity variable and writes it back to the HTML page
+      quantity++;
+      document.getElementById("quantity").innerHTML= quantity;
+}
+
+minusButton.onclick = function() { ////Update the quantity variable and writes it back to the HTML page
+  if(quantity>0){  //If quantity>0, update.
+      quantity--;
+      document.getElementById("quantity").innerHTML=quantity;
+  }
+  else{
+      document.getElementById("agreeButton").disabled = true; //if quantity try to go below 0, prevent and let user know. 
+      alert("You cannot select a quantity below 0. Try again please.");
+  }
+}
+
+agreeButton.onclick = function() { 
+  productModal.style.display = "none";
+  if(quantity>0){  //Turns button into "Check out now" button
+        document.getElementById("cartButton").innerHTML="Checkout now";
+  }
+  <!-- Details colors-->
+var color = document.getElementById("colorToChange").innerHTML;
+var numberOfDetails = quantity;
+for(i=numberOfDetails;i>0;i--){  //loop through the quantity number
+    document.getElementById("details-color-choose").innerHTML+='<input type="radio" id="'+color+'" name="color" value="'+color+'"> <label for="'+color+'"><span></span></label>';  //Display the appropriate number of colored circles into the details section
+}
+inputQuantity.value = quantity;  //update the quantity in the input quantity box
+       <!-- The section below deals with pricing updates -->
+var tmpColor= document.getElementById("colorToChange").innerHTML;  
+var actualPrice = price[tmpColor];
+actualPrice=actualPrice*quantity;
+document.getElementById("actual-price").innerHTML="$"+actualPrice;
+document.getElementById('old-price').innerHTML="$"+(actualPrice+ 50);   
+productColorCheckout.innerHTML="<br>"+document.getElementById("details-color-choose").innerHTML;
+quantityCheckout.innerHTML="x "+document.getElementById("quantity").innerHTML;
+priceCheckout.innerHTML="For Only: "+document.getElementById("actual-price").innerHTML;
+}
+
+cancelButton.onclick = function() {  //hides the modal 
+  productModal.style.display = "none";
+}
+
+
+
+    <!--Product Modal content & Product Color variables -->
+var productModal = document.getElementById("productModal");
+var productButton = document.getElementById("cartButton");
+var productSpan = document.getElementsByClassName("closeProduct")[0];
+var productColor =document.getElementById("productColor");
+    <!-- Checkout Modal variables -->
+var checkoutModal = document.getElementById("checkoutModal");
+var checkoutSpan = document.getElementsByClassName("closeCheckout")[0];
+var confirmButton = document.getElementById("checkoutButton");
+var cleanButton = document.getElementById("cleanButton");
+var productColorCheckout = document.getElementById("productColorCheckout");
+var quantityCheckout = document.getElementById("quantityCheckout");
+var priceCheckout = document.getElementById("priceCheckout");
+    
+    
+    
+confirmButton.onclick = function() { //This will reset all the variables to 0 and writes them back to the HTML page
+  prompt("Please enter an email so that a confirmation can be sent to you shortly!","eg: abc@gmail.com");
+  checkoutModal.style.display = "none";
+  quantity=0;
+  inputQuantity.value=0;
+  document.getElementById("actual-price").innerHTML="$"+0;  
+  document.getElementById("quantity").innerHTML=0;
+  document.getElementById("cartButton").innerHTML="Add to Cart";
+  document.getElementById("details-color-choose").innerHTML ="";
+}
+cleanButton.onclick = function() {  //This will reset all the variables to 0 and writes them back to the HTML page
+  quantity=0;
+  checkoutModal.style.display = "none";
+  inputQuantity.value=0;
+  document.getElementById("actual-price").innerHTML="$"+0; 
+  document.getElementById("quantity").innerHTML=0;
+  document.getElementById("cartButton").innerHTML="Add to Cart";
+  document.getElementById("details-color-choose").innerHTML="";
+}
+
+
+checkoutSpan.onclick = function() { //This is the close button on the checkout modal. It will hide the modal
+  checkoutModal.style.display = "none";
+}
+
+
+productButton.onclick = function() { //When the "Add to Cart" Button is clicked, if no color is selected, it will trigger the following action
+  if(document.getElementById("colorToChange").innerHTML==""){
+      productButton.disabled = true;
+      alert("Please select a color before continuing.");
+  }
+  else if(quantity==0){    //if the quantity is null, the product modal is displayed
+      productModal.style.display = "block";
+      productColor.innerHTML = document.getElementById("colorToChange").innerHTML;
+  }
+  else{   //if the quantity is >0, the checkout modal is displayed
+      checkoutModal.style.display = "block";
+  }
+}
+
+productSpan.onclick = function() {  //This is the product modal close button function. If triggered, it will be closed
+  productModal.style.display = "none";
+}
+
+window.onclick = function(event) {  //This is a function where if the user click outside of the modal window, it will be closed. This is a user friendly practice.
+  if (event.target == productModal) {
+    productModal.style.display = "none";
+  }
+  if (event.target == checkoutModal) {
+    checkoutModal.style.display = "none";
+  }
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+<!-- Changing text and Image color -->
+function changeText(value) {  //When the user select a color on the main page. The price, the old price and the color name will be updated.
+    document.getElementById('colorToChange').innerHTML = value;
+    document.getElementById('imageToChange').src = "images/" + value +".png";
+    document.getElementById('actual-price').innerHTML="$"+price[document.getElementById('colorToChange').innerHTML];
+    document.getElementById('old-price').innerHTML= "$"+(price[document.getElementById('colorToChange').innerHTML] + 50);
+}
+
+   
+    
+<!-- Help Modal -->
+var modal = document.getElementById("helpModal");
+var btn = document.getElementById("helpButton");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {  //When the need help button is clicked, it will be displayed.
+  modal.style.display = "block";
+}
+
+span.onclick = function() {   //This is the help modal close button function. If triggered, it will be closed
+  modal.style.display = "none";
+}
+
+</script>
+
+</main>
+    </body>
+        </html>
